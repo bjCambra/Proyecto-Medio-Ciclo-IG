@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="../assets/CSS_resorces/CSS_files/paginas_styles.css">
+    <script defer src="../assets/Scripts/js_index.js"></script>
+</head>
+<body>
+
+    <header id="navegacion">
+        <nav class="nav">
+           <ul class="nav-menu">
+              <li class="nav-menu-item"><a href="index.html" class="nav-menu-link">Inicio</a></li>
+              <li class="nav-menu-item"><a href="estudiantes.html" class="nav-menu-link">Estudiantes</a></li>
+              <li class="nav-menu-item"><a href="examinadores.html" class="nav-menu-link">Examinadores</a></li>
+              <li class="nav-menu-item"><a href="examen.html" class="nav-menu-link">Examenes</a></li>
+              <li class="nav-menu-item"><a href="medico.html" class="nav-menu-link">Reportes medicos</a></li>
+           </ul>
+        </nav>
+
+     </header>
+
+    <main>
+         
+        <div class="contenedor_all">
+            <ul class="ul">
+                <li class="lista active">Consultar</li>
+                <li class="lista">Registrar</li>
+            </ul>
+
+            <div class="contenido">
+                <div class="contenidos active">
+                    <div class="contenedor_formulario">
+                        <form action="../php_codigos/examen.php" method="POST" id="formulario_consulta">
+                            <div class="formulario">
+                                <h1>Buscar por Estudiante</h1>
+                                <div class="grupo">
+                                    <input type="text" id="CI" name="CI" required><span class="barra"></span>
+                                    <label class="label1" for="">C.I.</label>
+                                    <button type="submit">Busqueda</button>
+                                </div>
+   
+
+
+                            </div>
+                        </form>
+                    </div>
+                    
+                
+            </div>
+            <div class="contenidos">
+                <div class="contenedor_formulario">
+                    <form action="../php_codigos/examen_r.php" method="POST" id="formulario_Registro">
+                        <div class="formulario">
+                            <h1>Registrar Nuevo Examen</h1>
+
+                            <div class="grupo">
+                                <label for="">Fecha de Realizacion</label>
+                                <input type="date" id="Fecha_examen" name="Fecha_examen" required><span class="barra"></span>
+                            </div>
+
+                                <div class="grupo">
+                                  <input type="text" id="CI_Estudiante" name="CI_Estudiante" required><span class="barra"></span>
+                                  <label class="label1" for="">C.I. Del Estudiante</label>
+                                </div>
+
+                                <div class="grupo">
+                                    <input type="text" id="CI_Examinador1" name="CI_Examinador1" required><span class="barra"></span>
+                                    <label class="label1" for="">C.I. Del Examinador 1</label>
+                                  </div>
+
+                                  <div class="grupo">
+                                    <input type="text" id="CI_Examinador2"  name="CI_Examinador2" required><span class="barra"></span>
+                                    <label class="label1" for="">C.I. Del Examinador 2</label>
+                                  </div>
+
+                                  <div class="grupo">
+                                    <input type="text" id="CI_Examinador3" name="CI_Examinador3" required><span class="barra"></span>
+                                    <label class="label1" for="">C.I. Del Examinador 3</label>
+                                  </div>
+
+                                <div class="grupo">
+                                    <input type="text" id="Calificacion" name="Calificacion" required><span class="barra"></span>
+                                    <label class="label1" for="">Calificacion</label>
+                                </div>
+                                
+                                
+                                
+                                <button type="submit">Registrar Examen</button>
+                            
+
+
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+    
+</body>
+</html>

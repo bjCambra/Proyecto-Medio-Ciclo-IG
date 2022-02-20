@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="../assets/CSS_resorces/CSS_files/paginas_styles.css">
+    <script defer src="../assets/Scripts/js_index.js"></script>
+</head>
+<body>
+    
+    <header id="navegacion">
+        <nav class="nav">
+           <ul class="nav-menu">
+              <li class="nav-menu-item"><a href="index.html" class="nav-menu-link">Inicio</a></li>
+              <li class="nav-menu-item"><a href="estudiantes.html" class="nav-menu-link">Estudiantes</a></li>
+              <li class="nav-menu-item"><a href="examinadores.html" class="nav-menu-link">Examinadores</a></li>
+              <li class="nav-menu-item"><a href="examen.html" class="nav-menu-link">Examenes</a></li>
+              <li class="nav-menu-item"><a href="medico.html" class="nav-menu-link">Reportes medicos</a></li>
+           </ul>
+        </nav>
+
+     </header>
+    
+
+    <main>
+
+         
+        <div class="contenedor_all">
+            <ul class="ul">
+                <li class="lista active">Consultar</li>
+                <li class="lista">Registrar</li>
+            </ul>
+
+            <div class="contenido">
+                <div class="contenidos active">
+                    <div class="contenedor_formulario">
+                        <form action="../php_codigos/estudiantes.php" method="POST" id="formulario_consulta">
+                            <div class="formulario">
+                                <h1>Buscar Estudiante</h1>
+                                <div class="grupo">
+                                    <input type="text" id='CI' name="CI" required><span class="barra"></span>
+                                    <label class="label1" for="">C.I.</label>
+                                    <button type="submit">Busqueda</button>
+                                </div>
+   
+
+
+                            </div>
+                        </form>
+                    </div>
+                    
+            
+           
+
+                </div>
+                <div class="contenidos">
+                <div class="contenedor_formulario">
+                    <form action="../php_codigos/estudiantes_r.php" method="POST" id="formulario_Registro">
+                        <div class="formulario">
+                            <h1>Registrar Estudiante</h1>
+
+                             
+
+                                <div class="grupo">
+                                  <input type="text" id="CI" name='CI' required><span class="barra"></span>
+                                  <label class="label1" for="">C.I.</label>
+                                </div>
+
+                                <div class="grupo">
+                                    <input type="text" id="Nombre" name= 'Nombre' required><span class="barra"></span>
+                                    <label class="label1" for="">Nombres</label>
+                                </div>
+                                
+                                <div class="grupo">
+                                    <input type="text" id="Apellido" name='Apellido' required><span class="barra"></span>
+                                    <label class="label1" for="">Apellidos</label>
+                                </div>
+                                
+                                <div class="grupo">
+                                    <label for="">Fecha de Nacimiento</label>
+                                    <input type="date" id="Nacimiento" name= 'Nacimiento' required><span class="barra"></span>
+                                </div>
+                            
+
+                            
+
+                                <div class="grupo2" id="gen">
+                                    <label class="label2" for="">Genero</label>
+                                    <select name="lgenero" id="lgenero" >
+                                        <option value="" disabled selected>(Escoger uno)</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
+                                    </select>
+                                    
+                                </div>
+                                
+                                <div class="grupo">
+                                    <input type="text" id="Disciplina" name="Disciplina" required><span class="barra"></span>
+                                    <label class="label1" for="">Disciplina</label>
+                                </div>
+                                
+                                <div class="grupo2" id="cat">
+                                    <label class="label2" for="">Categoria</label>
+                                    <select name="lcategoria" id="lcategoria">
+                                    <option value="" disabled selected>(Escoger uno)</option>
+                                    <option value="1ra Categoria">1ra Categoria</option>
+                                    <option value="2da Categoria">2da Categoria</option>
+                                    <option value="3ra Categoria">3ra Categoria</option>
+                                    <option value="4ta Categoria">4ta Categoria</option>
+                                    <option value="5ta Categoria">5ta Categoria</option>
+                                    </select>
+                                    
+                                </div>
+                                
+                                <button type="submit">Registro</button>
+                            
+
+
+
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    
+</body>
+</html>
